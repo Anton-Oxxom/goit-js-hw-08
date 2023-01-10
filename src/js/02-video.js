@@ -10,4 +10,8 @@ function onPlay({ seconds }) {
   localStorage.setItem('videoplayer-current-time', seconds);
 }
 
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+const getTimeSum = (localStorage.getItem('videoplayer-current-time'));
+if (getTimeSum !== null) {
+    player.setCurrentTime(getTimeSum)
+
+}
